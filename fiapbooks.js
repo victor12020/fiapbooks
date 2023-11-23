@@ -34,7 +34,7 @@ const UsuarioSchema = new mongoose.Schema({
 const Usuario = mongoose.model("Usuario", UsuarioSchema);
 
 const produtolivrariaSchema = new mongoose.Schema({
-    id_produtolivraria: {
+    codigo: {
         type: String,
         required: true
     },
@@ -51,7 +51,7 @@ const produtolivrariaSchema = new mongoose.Schema({
         type: Number
     }
 });
-const Produtolivraria = mongoose.model("produtolivraria", produtolivrariaSchema);
+const Produtolivraria = mongoose.model("produto", produtolivrariaSchema);
 
 //configuração dos roteamendos//
 app.post("/cadastrousuario", async (req, res) => {
@@ -93,33 +93,29 @@ else{
 
 app.post("/cadastroprodutolivraria", async (req, res) => {
 
-    const id_produtolivraria = req.body.id_produtolivraria;
+    const codigo = req.body.codigo;
     const descricao = req.body.descricao;
     const fornecedor = req.body.fornecedor;
     const dataDeImpressao = req.body.dataDeImpressao
     const qntEstoque = req.body.qntEstoque
 
     const produtolivraria = new Produtolivraria({
-        id_produtolivraria : id_produtolivraria,
+        codigo : codigo,
         descricao : descricao,
         fornecedor : fornecedor,
         dataDeImpressao : dataDeImpressao,
         qntEstoque : qntEstoque,
     });
     
-    const id_produtolivrariaExiste = await Produtolivraria.findOne({id_produtolivraria : id_produtolivraria})
+    const codigoExiste = await Produtolivraria.findOne({codigo : codigo})
 
-    if(id_produtolivraria == null || descricao == null || fornecedor == null || dataDeImpressao == null || qntEstoque == null){
+    if(codigo == null || descricao == null || fornecedor == null || dataDeImpressao == null || qntEstoque == null){
         res.status(400).json({
             error: "prencha todos os campos"
         });}
-    else if(id_produtolivrariaExiste){
+    else if(codigoExiste){
                 res.status(400).json({
             error: "esse id ja existe"
-        });}
-    else if(qntEstoque > 44){
-        res.status(400).json({
-            error: "limite do alcançado coloque a menos ou igual a 44"
         });}
     else{
         try {
