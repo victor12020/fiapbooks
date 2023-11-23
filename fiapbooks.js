@@ -8,17 +8,21 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
+app.use(express.static('public'))
 const port = 3000;
 
 //configurando o banco de dados
 
-mongoose.connect("mongodb://127.0.0.1:27017/bookhaven", {
+mongoose.connect("mongodb://127.0.0.1:27017/fiapbook", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
 //criando a model do seu projetoconst 
 UsuarioSchema = new mongoose.Schema({
+    name: {
+        type: String,
+    },
     email: {
         type: String,
         required: true
@@ -52,17 +56,19 @@ const Produtolivraria = mongoose.model("produtolivraria", produtolivrariaSchema)
 //configuração dos roteamendos//
 app.post("/cadastrousuario", async (req, res) => {
 
+    const name = req.body.name;
     const email = req.body.email;
     const senha = req.body.senha
 
     const usuario = new Usuario({
+        name : name,
         email: email,
         senha : senha
     });
 
     const emailExiste = await Usuario.findOne({email : email}) 
 
-    if(email == null || senha == null){
+    if(name == null ||email == null || senha == null){
         res.status(400).json({
             error: "prencha todos os campos"
         });
