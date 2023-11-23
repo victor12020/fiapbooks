@@ -19,7 +19,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/fiapbook", {
 });
 
 //criando a model do seu projetoconst 
-UsuarioSchema = new mongoose.Schema({
+const UsuarioSchema = new mongoose.Schema({
     name: {
         type: String,
     },
@@ -33,7 +33,7 @@ UsuarioSchema = new mongoose.Schema({
 });
 const Usuario = mongoose.model("Usuario", UsuarioSchema);
 
-produtolivrariaSchema = new mongoose.Schema({
+const produtolivrariaSchema = new mongoose.Schema({
     id_produtolivraria: {
         type: String,
         required: true
