@@ -2,3 +2,40 @@ body{
     background-color: #072D42;
     color: white;
 }
+.mostralivros{
+    justify-content: space-between;
+}
+.blocoBunito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: #031824;
+    margin-bottom: 20px;
+}
+.bloco2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100vw;
+    background-color: #29F4D5;
+}
+.logo{
+    height: 50px; 
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    .logo{
+        height: 20px; 
+        width: auto;
+    }
+    .mostralivros{
+        justify-content: center;
+    }
+    a{
+        font-size: 16px;
+    }
+  }

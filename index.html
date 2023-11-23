@@ -10,11 +10,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar flex-column" style="background-color: #29F4D5; color: white;">
+        <nav class="navbar flex-column" style="background-color: #29F4D5; color: black;">
             <div class="container-md d-flex justify-content-between">
-                <div>
-                <a href="#" class="navbar-brand"><img src="LOGO.svg" alt="" style="height: 50px; width: auto;"></a>
-                <a href="#" class="navbar-brand">inicio</a>
+                <div class="d-flex align-items-center">
+                <a href="#" class="navbar-brand"><img class="logo" src="LOGO.svg" alt=""></a>
+                <a href="#" class="nav-link">inicio</a>
                 </div>
                 <div>
                     <ul class="navbar-nav d-flex flex-row">
@@ -51,33 +51,76 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <h3 class="container-md pb-1">nossos livros mais comprados</h3>
-        <div class="container-md d-flex flex-wrap justify-content-between">
+        <h3 class="container-md pb-1 mb-3">nossos livros mais comprados:</h3>
+        <div class="container-md d-flex flex-wrap mostralivros">
             <div class="card mb-3" style="width: 18rem;">
-                <img src="https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg" class="card-img-top p-3" alt="...">
+                <img src="https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg" class="card-img-top img-top\ p-3" alt="...">
                 <div class="card-body">
-                    <h2 class="card-title mb-3">o hobbit</h2>
-                    <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    <h4 class="card-title mb-3">o hobbit</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
                 </div>
             </div>
             <div class="card mb-3" style="width: 18rem;">
-                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/368115-1200-auto?v=638221978452600000&width=1200&height=auto&aspect=true" class="card-img-top p-3" alt="...">
+                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/368115-1200-auto?v=638221978452600000&width=1200&height=auto&aspect=true" class="card-img-top img-top p-3" alt="...">
                 <div class="card-body">
-                    <h2 class="card-title mb-3">Imperfeitos</h2>
-                    <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    <h4 class="card-title mb-3">Imperfeitos</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
                 </div>
             </div>
             <div class="card mb-3" style="width: 18rem;">
-                <img src="https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg" class="card-img-top p-3" alt="...">
+                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/199716-800-auto?v=638076755823600000&width=800&height=auto&aspect=true" class="card-img-top img-top p-3" alt="...">
                 <div class="card-body">
-                    <h2 class="card-title mb-3">o hobbit</h2>
-                    <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    <h4 class="card-title mb-3">A temperatura</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/200507-800-auto?v=638077650009600000&width=800&height=auto&aspect=true" class="card-img-top img-top p-3" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Ilusões perdidas</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/201068-800-auto?v=638079257181270000&width=800&height=auto&aspect=true" class="card-img-top img-top p-3" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Por que eu escrevo</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="https://lojasaraivanew.vtexassets.com/arquivos/ids/258725-800-auto?v=638092852751530000&width=800&height=auto&aspect=true" class="card-img-top img-top p-3" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title mb-3"> Café com Deus Pai</h4>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg">comprar</button>
+                    </div>
                 </div>
             </div>
             </div>
         </div>
+        <div class="blocoBunito">
+            <div class="bloco2"></div>
+        </div>
+        <div class="container-md d-flex flex-column">
+            <img class="mb-3" style="height: 50px; width: auto;" src="LOGO2.svg" alt="">
+            <h2>A fiap books e seus objetivos:</h2>
+            <p>No horizonte da revolução digital, a Fiap Books emerge como uma inovadora empresa que não apenas abraça a transformação tecnológica, mas a utiliza como um catalisador para redefinir o futuro dos livros e da educação. Numa era em que a informação é instantânea e as fronteiras entre o virtual e o físico se desvanecem, a Fiap Books posiciona-se na vanguarda, promovendo uma nova era de aprendizado e leitura.</p>
+            <img src="Slide 16_9 - 4.png" class="d-block w-100 my-3" alt="">
+            <h2>Integrando Tecnologia e Literatura</h2>
+            <p>A Fiap Books entende que a tecnologia não é apenas uma ferramenta, mas uma extensão do potencial humano. Ao integrar a tecnologia de forma inteligente em seus livros, a empresa cria uma experiência de leitura mais envolvente e interativa. Os livros da Fiap Books vão além das páginas impressas, incorporando elementos digitais, realidade aumentada e plataformas online para enriquecer o aprendizado.</p>
+        </div>
     </main>
-
     <footer class="pt-5">
         <div class="d-flex justify-content-center" style="background-color: #29F4D5; color: black;">
             <p>@fiap books</p>
