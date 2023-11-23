@@ -41,7 +41,7 @@ const produtolivrariaSchema = new mongoose.Schema({
     descricao: {
         type: String
     },
-    editora: {
+    fornecedor: {
         type: String
     },
     dataDeImpressao: {
@@ -95,21 +95,21 @@ app.post("/cadastroprodutolivraria", async (req, res) => {
 
     const id_produtolivraria = req.body.id_produtolivraria;
     const descricao = req.body.descricao;
-    const editora = req.body.editora;
+    const fornecedor = req.body.fornecedor;
     const dataDeImpressao = req.body.dataDeImpressao
     const qntEstoque = req.body.qntEstoque
 
     const produtolivraria = new Produtolivraria({
         id_produtolivraria : id_produtolivraria,
         descricao : descricao,
-        editora : editora,
+        fornecedor : fornecedor,
         dataDeImpressao : dataDeImpressao,
         qntEstoque : qntEstoque,
     });
     
     const id_produtolivrariaExiste = await Produtolivraria.findOne({id_produtolivraria : id_produtolivraria})
 
-    if(id_produtolivraria == null || descricao == null || editora == null || dataDeImpressao == null || qntEstoque == null){
+    if(id_produtolivraria == null || descricao == null || fornecedor == null || dataDeImpressao == null || qntEstoque == null){
         res.status(400).json({
             error: "prencha todos os campos"
         });}
